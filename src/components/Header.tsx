@@ -1,6 +1,7 @@
 import React from 'react';
-import { Eye, Bookmark, Clock, Sparkles, BookOpen } from 'lucide-react';
+import { Eye, Bookmark, Clock, Sparkles } from 'lucide-react';
 import { EyeCareSettings } from '../types';
+import { Logo } from './Logo';
 
 interface HeaderProps {
   onOpenEyeCare: () => void;
@@ -38,17 +39,16 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 flex items-center justify-between gap-8 px-4 sm:px-8 py-3.5 border-b border-[var(--border-subtle)] bg-[var(--bg-card)]/95 backdrop-blur-md transition-colors">
-      {/* Zone 1: Single text element wordmark */}
+      {/* Zone 1: Logo brand zone */}
       <a
         href="#"
         onClick={(e) => {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
-        className="flex items-center gap-2.5 text-base sm:text-lg font-serif font-bold tracking-tight text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors whitespace-nowrap shrink-0"
+        className="transition-opacity hover:opacity-90 whitespace-nowrap shrink-0 cursor-pointer"
       >
-        <BookOpen className="w-5 h-5 text-[var(--accent)] shrink-0" strokeWidth={1.75} />
-        <span>CBSE Humanities Archive</span>
+        <Logo size="sm" />
       </a>
 
       {/* Zone 2: 4-5 concise single-line text navigation links */}

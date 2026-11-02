@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { BookOpen, Compass, Globe, Landmark, TrendingUp, Feather, Eye, ArrowRight, ShieldCheck } from 'lucide-react';
 import { ALL_SUBJECTS, SUBJECT_METADATA } from '../data/papers';
+import { Logo } from './Logo';
 
 interface EntranceAnimationProps {
   onEnter: () => void;
@@ -55,12 +56,9 @@ export const EntranceAnimation: React.FC<EntranceAnimationProps> = ({ onEnter })
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center justify-center mb-6"
+          className="inline-flex items-center justify-center mb-6 p-4 rounded-2xl border border-[#d5c6a5] bg-[#f5eedf]/90 shadow-sm"
         >
-          <div className="relative flex items-center justify-center w-20 h-20 rounded-full border border-[#d5c6a5] bg-[#f5eedf] shadow-sm">
-            <div className="absolute inset-1 rounded-full border border-dashed border-[#e8ddc7]" />
-            <BookOpen className="w-8 h-8 text-[#9a3412]" strokeWidth={1.5} />
-          </div>
+          <Logo size="lg" />
         </motion.div>
 
         {/* Academic Hierarchy Headers */}
