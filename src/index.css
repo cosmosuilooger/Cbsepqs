@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+:root {
+  /* Default: Aesthetic Eye Care Sepia (Comfortable, anti-glare, warm paperwhite) */
+  --bg-canvas: #fbf7ef;
+  --bg-surface: #f5eedf;
+  --bg-card: #fdfaf3;
+  --bg-card-hover: #fffdf8;
+  --border-subtle: #e8ddc7;
+  --border-strong: #d5c6a5;
+  --text-primary: #2a221b;
+  --text-secondary: #5e5043;
+  --text-muted: #8b7c6c;
+  --accent: #9a3412;
+  --accent-soft: #f4e3d7;
+  --accent-amber: #b45309;
+  --accent-amber-soft: #fef3c7;
+  --paper-grain: rgba(180, 83, 9, 0.03);
+}
+
+.theme-dark,
+.dark {
+  /* Midnight Scholar Night Reader */
+  --bg-canvas: #12100e;
+  --bg-surface: #191714;
+  --bg-card: #201d19;
+  --bg-card-hover: #27241f;
+  --border-subtle: #302b25;
+  --border-strong: #443c33;
+  --text-primary: #ede3d2;
+  --text-secondary: #b5a896;
+  --text-muted: #7d7263;
+  --accent: #ea580c;
+  --accent-soft: rgba(234, 88, 12, 0.15);
+  --accent-amber: #d97706;
+  --accent-amber-soft: rgba(217, 119, 6, 0.18);
+  --paper-grain: transparent;
+}
+
+.theme-studio {
+  /* Studio Minimal / Clean Gallery Light */
+  --bg-canvas: #f9fafb;
+  --bg-surface: #f3f4f6;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fafafa;
+  --border-subtle: #e5e7eb;
+  --border-strong: #d1d5db;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --accent: #0f172a;
+  --accent-soft: #e2e8f0;
+  --accent-amber: #b45309;
+  --accent-amber-soft: #fef3c7;
+  --paper-grain: transparent;
+}
+
+.theme-parchment {
+  /* Deep Antique Parchment */
+  --bg-canvas: #f4ecdc;
+  --bg-surface: #ecdfc8;
+  --bg-card: #f9f3e5;
+  --bg-card-hover: #fcf8ee;
+  --border-subtle: #dccbb0;
+  --border-strong: #c8b292;
+  --text-primary: #291e14;
+  --text-secondary: #574433;
+  --text-muted: #846d57;
+  --accent: #78350f;
+  --accent-soft: #faebd7;
+  --accent-amber: #92400e;
+  --accent-amber-soft: #fef3c7;
+  --paper-grain: rgba(120, 53, 15, 0.04);
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Custom scrollbars that honor the warm sepia tone */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

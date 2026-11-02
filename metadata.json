@@ -1,0 +1,8 @@
+{
+  "name": "CBSE Humanities Papers Archive",
+  "description": "Comprehensive archival portal for CBSE Class 12 Humanities previous year question papers and solutions (History, Geography, Economics, Hindi, English) categorized by academic year with aesthetic eye-care mode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
